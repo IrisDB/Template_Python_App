@@ -130,10 +130,6 @@ class MyTestCase(unittest.TestCase):
         # verify
         self.assertIsNone(actual)
 
-    #def test_artifact_produced(self):
-    #
-
-
     """
     # Use this test if the App should return the input data
     def test_app_returns_input(self):
