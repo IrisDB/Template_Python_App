@@ -61,6 +61,13 @@ class MoveAppsExecutor:
             parsed = json.loads(config)
         if os.environ.get("PRINT_CONFIGURATION", "no") == "yes":
             logging.info(f'app will be started with configuration: {parsed}')
+
+        # override app-configuration with personal tokens
+        load_dotenv(dotenv_path="./myPersonalPasswords.env")
+        parsed["username"] = os.getenv("MOVEBANK_USERNAME")
+        parsed["password"] = os.getenv("MOVEBANK_PASSWORD")
+        parsed["stamen_key"] = os.getenv("STADIA_API")
+
         return parsed
 
     def __store_output(self, data):

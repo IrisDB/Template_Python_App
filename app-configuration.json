@@ -1,3 +1,8 @@
 {
-  "app-name": "MoveApps Python SDK"
+  "app-name": "MoveApps Python SDK",
+  "year": 1960,
+  "username": "secret",
+  "password": "secret",
+  "stamen_key": "secret",
+  "test": {}
 }

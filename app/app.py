@@ -14,6 +14,10 @@ class App(object):
         """Your app code goes here"""
         logging.info(f'Welcome to the {config}')
 
+        logging.info(config["test"])
+        if config["test"]:
+            logging.info("Test is true")
+
         auxiliary_file_a = MoveAppsIo.get_auxiliary_file_path("auxiliary-file-a")
         with open(auxiliary_file_a, 'r') as f:
             logging.info(f.read())
